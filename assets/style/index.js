@@ -421,6 +421,9 @@ const styles = ({
     height_100 : {
         height               : 100
     },
+    height_full : {
+        height               : '100%'
+    },
     minHeight : {
         minHeight            :  150
     },
@@ -701,7 +704,19 @@ const styles = ({
         flex                    : 1,
         alignSelf               : 'center',
     },
-
+    clickBtn : {
+        width                   : 50,
+        height                  : 50,
+        alignItems              : 'center',
+        justifyContent          : 'center',
+        borderWidth             : 1,
+        borderColor             : '#FFF',
+    },
+    blockFix : {
+        position                : 'absolute',
+        bottom                  : 0,
+        right                   : 0
+    }
 
 
 });

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {View, Text, TouchableOpacity} from "react-native";
-import {Container, Content} from 'native-base'
+import {Button, Container, Content, Icon} from 'native-base'
 import styles from '../../assets/style';
 import i18n from "../../locale/i18n";
 import {connect} from "react-redux";
@@ -52,11 +52,10 @@ class OpenCamera extends Component {
             let photo = await this.camera.takePictureAsync({
                 base64 : true
             });
-            // console.log('photo =====', photo);
+            // console.log('photo =====', photo.base64);
 
-            this.props.navigation.navigate('FormPayment', {photo : photo});
+            this.props.navigation.navigate('FormPayment', {photo : photo.base64});
         }
-
     };
 
     render() {
@@ -71,8 +70,8 @@ class OpenCamera extends Component {
 
                     {
                         (this.state.hasCameraPermission && this.state.cameraBrowserOpenPE === true) ?
-                            <View style={[styles.Width_100, styles.bgFullWidth]}>
-                                <Camera style={[styles.Width_100, styles.bgFullWidth, { height : 900}]} type={this.state.type} ref={ref => {this.camera = ref;}}>
+                            <View style={[styles.Width_100, styles.bgFullWidth, styles.height_full]}>
+                                <Camera style={[styles.Width_100, styles.bgFullWidth, styles.height_full]} type={this.state.type} ref={ref => {this.camera = ref;}}>
 
                                 </Camera>
                             </View>
@@ -80,16 +79,21 @@ class OpenCamera extends Component {
                             <View/>
                     }
 
-                </Content>
 
-                <View style={[styles.overHidden, styles.rowGroup]}>
-                    <TouchableOpacity style={[styles.clickLogin, styles.bg_darkGreen,styles.RadiusTop_5]} onPress={() => this.snap()}>
-                        <Text style={[styles.textRegular, styles.textSize_18, styles.text_White,styles.paddingVertical_5, styles.textCenter]}>{i18n.translate('payoff')}</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={[styles.clickLogin, styles.bg_darkGreen,styles.RadiusTop_5]} onPress={() => this.snap()}>
-                        <Text style={[styles.textRegular, styles.textSize_18, styles.text_White,styles.paddingVertical_5, styles.textCenter]}>{i18n.translate('payoff')}</Text>
-                    </TouchableOpacity>
-                </View>
+                    <View style={[styles.overHidden, styles.rowGroup, styles.paddingVertical_15, styles.paddingHorizontal_15, styles.blockFix, styles.Width_100]}>
+                        <TouchableOpacity style={[styles.clickBtn, styles.Radius_60]} onPress={() => this.snap()}>
+                            <Text style={[styles.textRegular, styles.textSize_18, styles.text_White,styles.paddingVertical_5, styles.textCenter]}>
+                                <Icon style={[styles.text_White]} type="AntDesign" name='check' />
+                            </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={[styles.clickBtn, styles.Radius_60]} onPress={() => this.props.navigation.goBack()}>
+                            <Text style={[styles.textRegular, styles.textSize_18, styles.text_White,styles.paddingVertical_5, styles.textCenter]}>
+                                <Icon style={[styles.text_White]} type="AntDesign" name='close' />
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
+
+                </Content>
 
             </Container>
 

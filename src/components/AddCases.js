@@ -177,12 +177,13 @@ class AddCases extends Component {
 	};
 
 	_ImagePicker = async (type) => {
+
 		this.askPermissionsAsync();
 
 		let result = await ImagePicker.launchImageLibraryAsync({
-			allowsEditing: true,
-			aspect: [4, 3],
-			base64:true,
+			allowsEditing       : false,
+			aspect              : [4, 3],
+			base64              : true,
 		});
 
 		let localUri = result.uri;
@@ -203,6 +204,7 @@ class AddCases extends Component {
                 this.setState({ handicappedProof: result.uri ,handicappedProofBase64:result.base64 });
             }
 		}
+
 	};
 
     showDatePicker = () => {

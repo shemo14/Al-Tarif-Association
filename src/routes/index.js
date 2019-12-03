@@ -70,14 +70,14 @@ const AppNavigator = createStackNavigator({
             header: null
         }
     },
-    DetailsCasesUser : {
-        screen : DetailsCasesUser,
+    OpenCamera : {
+        screen : OpenCamera,
         navigationOptions: {
             header: null
         }
     },
-    OpenCamera : {
-        screen : OpenCamera,
+    DetailsCasesUser : {
+        screen : DetailsCasesUser,
         navigationOptions: {
             header: null
         }

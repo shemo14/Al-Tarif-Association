@@ -8,10 +8,9 @@ import {chooseLang, profile, userLogin} from "../actions";
 import axios from "axios";
 import CONST from "../consts";
 import Spinner from "react-native-loading-spinner-overlay";
+import {NavigationEvents} from "react-navigation";
 
 import * as ImagePicker from 'expo-image-picker';
-
-let    Base64_   = [];
 
 let BUTTONS = [
     { text: i18n.translate('gallery_photo'),
@@ -61,20 +60,22 @@ class FormPayment extends Component {
             base_64                 : [],
             photos                  : [],
             hasCameraPermission     : null,
-
+            imgBase64               : ''
         }
 
     }
 
     async componentWillMount() {
 
-        if(this.state.eventImg === ''){
-            console.log('photo', this.state.eventImg);
-            this.setState({ eventImg : i18n.translate('receipt') });
+        if(this.props.navigation.state.params.photo){
+            this.setState({imgBase64 : this.props.navigation.state.params.photo});
         }else {
-            console.log('photo', this.state.eventImg);
-            this.setState({ eventImg : this.props.navigation.state.params.photo});
+            this.setState({ imgBase64 : i18n.translate('receipt') });
         }
+
+        setTimeout(()=> {
+            console.log('photo navigation =====', this.state.imgBase64);
+        }, 3000);
 
         this.setState({spinner: true});
 
@@ -139,7 +140,7 @@ class FormPayment extends Component {
             console.log(result);
 
             if (!result.cancelled) {
-                this.setState({ userImage: result.uri ,ImgBase64:result.base64 ,eventImg:filename});
+                this.setState({ userImage: result.uri ,imgBase64:result.base64 ,eventImg:filename});
             }
 
 
@@ -210,7 +211,7 @@ class FormPayment extends Component {
                 account_name        : this.state.nameBank,
                 account_number      : this.state.accNumber,
                 donate_money        : this.state.amount,
-                image               : this.state.eventImg,
+                image               : this.state.imgBase64,
             };
 
             this.props.navigation.navigate('SentMessage', { data : data });
@@ -219,7 +220,9 @@ class FormPayment extends Component {
 
     }
 
-
+    onFocus(){
+        this.componentWillMount();
+    }
 
     render() {
 
@@ -227,6 +230,8 @@ class FormPayment extends Component {
         return (
 
             <Container>
+
+                <NavigationEvents onWillFocus={() => this.onFocus()} />
 
                 <Spinner
                     visible           = { this.state.spinner }

@@ -163,259 +163,259 @@ class DetailsCasesUser extends Component {
 
                     <View style={[styles.overHidden]}>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10,styles.bg_lightWhite]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('nameCases')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.name }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('civil')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.national_id }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10,styles.bg_lightWhite]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('Date')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.birthday }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('phone')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.phone }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10,styles.bg_lightWhite]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('email')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.email }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('Monthly')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.income }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10,styles.bg_lightWhite]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('choosemarit')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.have_handicapped }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('num')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.handicapped_number }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10,styles.bg_lightWhite]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('disability')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.handicapped_type }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('doserver')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.have_maid }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10,styles.bg_lightWhite]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('doser')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.maid_number }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('labor')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.have_workers }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10,styles.bg_lightWhite]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('laor')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.workers_number }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('commercial')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.have_commerical_record }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10,styles.bg_lightWhite]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('corcial')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.commerical_record_number }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('members')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.family_number }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10,styles.bg_lightWhite]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('city')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.city_id }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('Neighbor')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.quarter_id }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10,styles.bg_lightWhite]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('healthstatus')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.healthStatus }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('living')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.LivingType }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10,styles.bg_lightWhite]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('Social')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.socialStatus }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('Nationality')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.Nationality }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10,styles.bg_lightWhite]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('Condsi')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.type }
                             </Text>
                         </View>
                         <View style={[styles.overHidden, styles.rowGroup,styles.paddingHorizontal_10,styles.paddingVertical_10]}>
-                            <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 {i18n.translate('Date')} :
                             </Text>
-                            <Text style={[styles.text_brown, styles.textSize_16, styles.textRegular, styles.textLeft]}>
+                            <Text style={[styles.text_brown, styles.textSize_14, styles.textRegular, styles.textLeft]}>
                                 { this.state.date }
                             </Text>
                         </View>
 
-                        <View style={[styles.overHidden, styles.rowGroup]}>
+                        <View style={[styles.overHidden, styles.rowGroup, styles.marginVertical_15]}>
                             <View style={[styles.overHidden, styles.flex_30]}>
-                                <View style={[styles.flexCenter]}>
-                                    <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular]}>
-                                        {i18n.translate('Dessituation')}
+                                <View style={[styles.flexCenter, styles.marginVertical_5]}>
+                                    <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular]}>
+                                        {i18n.translate('picture')}
                                     </Text>
                                 </View>
                                 <View style={[styles.icImg, styles.flexCenter]}>
-                                    <Image style={[styles.icImg, styles.flexCenter]} source={{ uri: this.state.national_id_image }}/>
+                                    <Image style={[styles.icImg, styles.flexCenter, styles.Radius_5]} source={{ uri: this.state.national_id_image }}/>
                                 </View>
                             </View>
                             <View style={[styles.overHidden, styles.flex_30]}>
-                                <View style={[styles.flexCenter]}>
-                                    <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular]}>
-                                        {i18n.translate('Dessituation')}
+                                <View style={[styles.flexCenter, styles.marginVertical_5]}>
+                                    <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular]}>
+                                        {i18n.translate('FamiBoo')}
                                     </Text>
                                 </View>
                                 <View style={[styles.icImg, styles.flexCenter]}>
-                                    <Image style={[styles.icImg, styles.flexCenter]} source={{ uri: this.state.national_id_image }}/>
+                                    <Image style={[styles.icImg, styles.flexCenter, styles.Radius_5]} source={{ uri: this.state.family_notebook }}/>
                                 </View>
                             </View>
                             <View style={[styles.overHidden, styles.flex_30]}>
-                                <View style={[styles.flexCenter]}>
-                                    <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular]}>
-                                        {i18n.translate('Dessituation')}
+                                <View style={[styles.flexCenter, styles.marginVertical_5]}>
+                                    <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular]}>
+                                        {i18n.translate('bill')}
                                     </Text>
                                 </View>
                                 <View style={[styles.icImg, styles.flexCenter]}>
-                                    <Image style={[styles.icImg, styles.flexCenter]} source={{ uri: this.state.national_id_image }}/>
+                                    <Image style={[styles.icImg, styles.flexCenter, styles.Radius_5]} source={{ uri: this.state.electricity_bill }}/>
                                 </View>
                             </View>
                         </View>
-                        <View style={[styles.overHidden, styles.rowGroup]}>
+                        <View style={[styles.overHidden, styles.rowGroup, styles.marginVertical_15]}>
                             <View style={[styles.overHidden, styles.flex_30]}>
-                                <View style={[styles.flexCenter]}>
-                                    <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular]}>
-                                        {i18n.translate('Dessituation')}
+                                <View style={[styles.flexCenter, styles.marginVertical_5]}>
+                                    <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular]}>
+                                        {i18n.translate('lease')}
                                     </Text>
                                 </View>
                                 <View style={[styles.icImg, styles.flexCenter]}>
-                                    <Image style={[styles.icImg, styles.flexCenter]} source={{ uri: this.state.national_id_image }}/>
+                                    <Image style={[styles.icImg, styles.flexCenter, styles.Radius_5]} source={{ uri: this.state.lease }}/>
                                 </View>
                             </View>
                             <View style={[styles.overHidden, styles.flex_30]}>
-                                <View style={[styles.flexCenter]}>
-                                    <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular]}>
-                                        {i18n.translate('Dessituation')}
+                                <View style={[styles.flexCenter, styles.marginVertical_5]}>
+                                    <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular]}>
+                                        {i18n.translate('Proreligion')}
                                     </Text>
                                 </View>
                                 <View style={[styles.icImg, styles.flexCenter]}>
-                                    <Image style={[styles.icImg, styles.flexCenter]} source={{ uri: this.state.national_id_image }}/>
+                                    <Image style={[styles.icImg, styles.flexCenter, styles.Radius_5]} source={{ uri: this.state.debt_proof }}/>
                                 </View>
                             </View>
                             <View style={[styles.overHidden, styles.flex_30]}>
-                                <View style={[ styles.flexCenter]}>
-                                    <Text style={[styles.text_gray, styles.textSize_16, styles.textRegular]}>
-                                        {i18n.translate('Dessituation')}
+                                <View style={[ styles.flexCenter, styles.marginVertical_5]}>
+                                    <Text style={[styles.text_gray, styles.textSize_14, styles.textRegular]}>
+                                        {i18n.translate('Proof')}
                                     </Text>
                                 </View>
                                 <View style={[styles.icImg, styles.flexCenter]}>
-                                    <Image style={[styles.icImg, styles.flexCenter]} source={{ uri: this.state.national_id_image }}/>
+                                    <Image style={[styles.icImg, styles.flexCenter, styles.Radius_5]} source={{ uri: this.state.handicapped_proof }}/>
                                 </View>
                             </View>
                         </View>
