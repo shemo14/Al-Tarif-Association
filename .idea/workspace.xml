@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b83a1297-d519-4fd3-b9df-aabc04ed9a10" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactotronConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactotronConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/style/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddCases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddCases.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DetailsCasesUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DetailsCasesUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locale/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/locale/ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locale/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/locale/en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/FormPayment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FormPayment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/OpenCamera.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OpenCamera.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,11 +68,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/FormPayment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="76" column="72" selection-start-line="76" selection-start-column="72" selection-end-line="76" selection-end-column="72" />
+            <state relative-caret-position="310">
+              <caret line="71" column="61" selection-start-line="71" selection-start-column="61" selection-end-line="71" selection-end-column="61" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/locale/ar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="565">
+              <caret line="183" column="44" lean-forward="true" selection-start-line="183" selection-start-column="44" selection-end-line="184" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/locale/en.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="586">
+              <caret line="185" column="11" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -139,8 +153,6 @@
         <option value="$PROJECT_DIR$/src/components/SentMessage.js" />
         <option value="$PROJECT_DIR$/src/routes/DrawerCustomization.js" />
         <option value="$PROJECT_DIR$/src/consts/index.js" />
-        <option value="$PROJECT_DIR$/locale/ar.js" />
-        <option value="$PROJECT_DIR$/locale/en.js" />
         <option value="$PROJECT_DIR$/node_modules/expo-multiple-imagepicker/src/CameraBrowser.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/MyCases.js" />
@@ -150,6 +162,8 @@
         <option value="$PROJECT_DIR$/src/components/DetailsCasesUser.js" />
         <option value="$PROJECT_DIR$/src/components/AddCases.js" />
         <option value="$PROJECT_DIR$/src/components/OpenCamera.js" />
+        <option value="$PROJECT_DIR$/locale/ar.js" />
+        <option value="$PROJECT_DIR$/locale/en.js" />
         <option value="$PROJECT_DIR$/src/components/FormPayment.js" />
       </list>
     </option>
@@ -170,6 +184,11 @@
             <path>
               <item name="Al-Tarif-Association-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="Al-Tarif-Association-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Al-Tarif-Association-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Al-Tarif-Association-master" type="462c0819:PsiDirectoryNode" />
+              <item name="locale" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Al-Tarif-Association-master" type="b2602c69:ProjectViewProjectNode" />
@@ -225,12 +244,12 @@
       <updated>1574606127572</updated>
       <workItem from="1574606129100" duration="9569000" />
       <workItem from="1574630522845" duration="400000" />
-      <workItem from="1575360419089" duration="25392000" />
+      <workItem from="1575360419089" duration="25765000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35361000" />
+    <option name="totallyTimeSpent" value="35734000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -343,13 +362,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/locale/en.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="152" column="42" selection-start-line="152" selection-start-column="42" selection-end-line="152" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/DrawerCustomization.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -441,13 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/locale/ar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="116" column="10" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DetailsCasesUser.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -478,10 +483,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/locale/ar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="183" column="44" lean-forward="true" selection-start-line="183" selection-start-column="44" selection-end-line="184" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locale/en.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="185" column="11" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/FormPayment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="76" column="72" selection-start-line="76" selection-start-column="72" selection-end-line="76" selection-end-column="72" />
+        <state relative-caret-position="310">
+          <caret line="71" column="61" selection-start-line="71" selection-start-column="61" selection-end-line="71" selection-end-column="61" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

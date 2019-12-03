@@ -182,6 +182,7 @@ const ar = {
     'datecases'                 : 'تاريخ الحاله',
     'mycases'                   : 'حالآتي',
     'city'                      : 'المدينه',
+    'upload'                    : 'تم تحميل الصوره',
 };
 
 export default ar;

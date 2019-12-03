@@ -69,6 +69,7 @@ class FormPayment extends Component {
 
         if(this.props.navigation.state.params.photo){
             this.setState({imgBase64 : this.props.navigation.state.params.photo});
+            this.setState({ eventImg : i18n.translate('upload') });
         }else {
             this.setState({ imgBase64 : i18n.translate('receipt') });
         }
