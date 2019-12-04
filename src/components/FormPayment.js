@@ -146,7 +146,7 @@ class FormPayment extends Component {
 
 
         } else if (i.i === 1) {
-            this.props.navigation.navigate('OpenCamera');
+            this.props.navigation.navigate('OpenCamera', {namePage : FormPayment});
         }
 
     };

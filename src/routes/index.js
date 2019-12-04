@@ -43,7 +43,7 @@ const drawerCust = (props) => (<DrawerCustomization {...props} />);
 
 const drawerNavigator = createDrawerNavigator({
     Home                : Home,
-    // MyCases             : MyCases,
+    MyCases             : MyCases,
     Setting             : Setting,
     MyDonations         : MyDonations,
     MyInterests         : MyInterests,

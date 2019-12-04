@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import {View, Text, TouchableOpacity} from "react-native";
-import {Button, Container, Content, Icon} from 'native-base'
+import {Container, Content, Icon} from 'native-base'
 import styles from '../../assets/style';
-import i18n from "../../locale/i18n";
 import {connect} from "react-redux";
 import {chooseLang, profile, userLogin} from "../actions";
 
@@ -20,12 +19,13 @@ class OpenCamera extends Component {
             base_64                 : [],
             photos                  : [],
             hasCameraPermission     : null,
-
+            namePage                : this.props.navigation.state.params.namePage,
         }
 
     }
 
     async componentWillMount() {
+
 
         this.setState({cameraBrowserOpenPE: true});
         const { status } = await Permissions.askAsync(Permissions.CAMERA);
@@ -50,11 +50,19 @@ class OpenCamera extends Component {
     snap = async () => {
         if (this.camera) {
             let photo = await this.camera.takePictureAsync({
-                base64 : true
+                base64              : true,
+                quality             : 0.5
             });
-            // console.log('photo =====', photo.base64);
 
-            this.props.navigation.navigate('FormPayment', {photo : photo.base64});
+            let localUri = photo.uri;
+
+            console.log('image ===', localUri);
+
+            if (this.state.namePage === 'FormPayment'){
+                this.props.navigation.navigate('FormPayment', {photo : photo.base64});
+            } else {
+                this.props.navigation.navigate('AddCases', {photo : photo.base64, image : localUri, type : this.props.navigation.state.params.key});
+            }
         }
     };
 

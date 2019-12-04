@@ -1,6 +1,22 @@
 import React, { Component } from "react";
 import {View, Text, TouchableOpacity, Image} from "react-native";
-import {Container, Content, Header, Button, Left, Icon, Title, Body, Form, Item, Input, Picker, CheckBox, Toast} from 'native-base'
+import {
+    Container,
+    Content,
+    Header,
+    Button,
+    Left,
+    Icon,
+    Title,
+    Body,
+    Form,
+    Item,
+    Input,
+    Picker,
+    CheckBox,
+    Toast,
+    ActionSheet
+} from 'native-base'
 import styles from '../../assets/style';
 import i18n from "../../locale/i18n";
 import axios from 'axios';
@@ -9,8 +25,37 @@ import CONST from "../consts";
 import {connect} from "react-redux";
 import DateTimePicker from "react-native-modal-datetime-picker";
 import * as ImagePicker from 'expo-image-picker';
-import * as Permissions from 'expo-permissions';
 import {chooseLang, profile, userLogin} from "../actions";
+import {NavigationEvents} from "react-navigation";
+
+let BUTTONS = [
+    { text: i18n.translate('gallery_photo'),
+        i      : 0,
+        textStyle: {
+            color           : "white",
+            fontFamily      : 'cairo',
+            textAlign       : 'center',
+        }
+    },
+    { text: i18n.translate('camera_photo'),
+        i       : 1,
+        textStyle: {
+            color           : "white",
+            fontFamily      : 'cairo',
+            textAlign       : 'center',
+        }
+    },
+    { text: i18n.translate('cancel'),
+        textStyle: {
+            color           : "#ff5b49",
+            fontFamily      : 'cairo',
+            textAlign       : 'center',
+        }
+    }
+];
+
+let DESTRUCTIVE_INDEX   = 2;
+let CANCEL_INDEX        = 2;
 
 class AddCases extends Component {
     constructor(props){
@@ -72,6 +117,50 @@ class AddCases extends Component {
     }
 
 	componentWillMount() {
+
+            if(this.props.navigation.state.params.type){
+                if (this.props.navigation.state.params.type === 'id') {
+                    this.setState({
+                        idImage                 : this.props.navigation.state.params.image ,
+                        idBase64                : this.props.navigation.state.params.photo
+                    });
+                }else if(this.props.navigation.state.params.type === 'book'){
+                    this.setState({
+                        familyBookImage         : this.props.navigation.state.params.image ,
+                        familyBookBase64        : this.props.navigation.state.params.photo
+                    });
+                }else if(this.props.navigation.state.params.type === 'bill'){
+                    this.setState({
+                        electricityBillImage    : this.props.navigation.state.params.image ,
+                        electricityBillBase64   : this.props.navigation.state.params.photo
+                    });
+                }else if(this.props.navigation.state.params.type === 'lease'){
+                    this.setState({
+                        leaseImage              : this.props.navigation.state.params.image ,
+                        leaseBase64             : this.props.navigation.state.params.photo
+                    });
+                }else if(this.props.navigation.state.params.type === 'debtProof'){
+                    this.setState({
+                        debtProofImage          : this.props.navigation.state.params.image ,
+                        debtProofBase64         : this.props.navigation.state.params.photo
+                    });
+                }else if(this.props.navigation.state.params.type === 'handicappedProof'){
+                    this.setState({
+                        handicappedProof        : this.props.navigation.state.params.image ,
+                        handicappedProofBase64  : this.props.navigation.state.params.photo
+                    });
+                }
+            }else {
+                this.setState({
+                    idBase64                : null,
+                    familyBookBase64        : null,
+                    electricityBillBase64   : null,
+                    leaseBase64             : null,
+                    debtProofBase64         : null,
+                    handicappedProofBase64  : null,
+                });
+            }
+
 
 		this.setState({spinner: true});
 
@@ -170,42 +259,84 @@ class AddCases extends Component {
 
     }
 
-
-	askPermissionsAsync = async () => {
-		await Permissions.askAsync(Permissions.CAMERA);
-		await Permissions.askAsync(Permissions.CAMERA_ROLL);
-	};
-
-	_ImagePicker = async (type) => {
-
-		this.askPermissionsAsync();
-
-		let result = await ImagePicker.launchImageLibraryAsync({
-			allowsEditing       : false,
-			aspect              : [4, 3],
-			base64              : true,
-		});
-
-		let localUri = result.uri;
-		let filename = localUri.split('/').pop();
-
-		if (!result.cancelled) {
-		    if (type === 'id'){
-				this.setState({ idImage: result.uri ,idBase64:result.base64 });
-            }else if(type === 'book'){
-				this.setState({ familyBookImage: result.uri ,familyBookBase64:result.base64 });
-            }else if(type === 'bill'){
-				this.setState({ electricityBillImage: result.uri ,electricityBillBase64:result.base64 });
-            }else if(type === 'lease'){
-				this.setState({ leaseImage: result.uri ,leaseBase64:result.base64 });
-            }else if(type === 'debtProof'){
-				this.setState({ debtProofImage: result.uri ,debtProofBase64:result.base64 });
-            }else if(type === 'handicappedProof'){
-                this.setState({ handicappedProof: result.uri ,handicappedProofBase64:result.base64 });
+    open(key) {
+        ActionSheet.show(
+            {
+                options                 : BUTTONS,
+                cancelButtonIndex       : CANCEL_INDEX,
+                destructiveButtonIndex  : DESTRUCTIVE_INDEX,
+                title                   : i18n.translate('image_video')
+            },
+            buttonIndex => {
+                this.uploadImage(BUTTONS[buttonIndex], key);
             }
-		}
+        )
+    }
 
-	};
+    uploadImage = async (i, key) => {
+
+        if (i.i === 0) {
+
+            let result = await ImagePicker.launchImageLibraryAsync({
+                allowsEditing       : false,
+                aspect              : [4, 3],
+                base64              : true,
+                quality             : 0.5
+            });
+
+            let localUri = result.uri;
+            let filename = localUri.split('/').pop();
+
+            if (!result.cancelled) {
+                if (key === 'id'){
+                    this.setState({ idImage: result.uri ,idBase64:result.base64 });
+                }else if(key === 'book'){
+                    this.setState({ familyBookImage: result.uri ,familyBookBase64:result.base64 });
+                }else if(key === 'bill'){
+                    this.setState({ electricityBillImage: result.uri ,electricityBillBase64:result.base64 });
+                }else if(key === 'lease'){
+                    this.setState({ leaseImage: result.uri ,leaseBase64:result.base64 });
+                }else if(key === 'debtProof'){
+                    this.setState({ debtProofImage: result.uri ,debtProofBase64:result.base64 });
+                }else if(key === 'handicappedProof'){
+                    this.setState({ handicappedProof: result.uri ,handicappedProofBase64:result.base64 });
+                }
+            }
+
+        } else if (i.i === 1) {
+            this.props.navigation.navigate('OpenCamera', {namePage : AddCases, key : key});
+        }
+
+    };
+
+	// _ImagePicker = async (type) => {
+    //
+	// 	let result = await ImagePicker.launchImageLibraryAsync({
+	// 		allowsEditing       : false,
+	// 		aspect              : [4, 3],
+	// 		base64              : true,
+	// 	});
+    //
+	// 	let localUri = result.uri;
+	// 	let filename = localUri.split('/').pop();
+    //
+	// 	if (!result.cancelled) {
+	// 	    if (type === 'id'){
+	// 			this.setState({ idImage: result.uri ,idBase64:result.base64 });
+    //         }else if(type === 'book'){
+	// 			this.setState({ familyBookImage: result.uri ,familyBookBase64:result.base64 });
+    //         }else if(type === 'bill'){
+	// 			this.setState({ electricityBillImage: result.uri ,electricityBillBase64:result.base64 });
+    //         }else if(type === 'lease'){
+	// 			this.setState({ leaseImage: result.uri ,leaseBase64:result.base64 });
+    //         }else if(type === 'debtProof'){
+	// 			this.setState({ debtProofImage: result.uri ,debtProofBase64:result.base64 });
+    //         }else if(type === 'handicappedProof'){
+    //             this.setState({ handicappedProof: result.uri ,handicappedProofBase64:result.base64 });
+    //         }
+	// 	}
+    //
+	// };
 
     showDatePicker = () => {
         this.setState({ isDatePickerVisible: true });
@@ -344,12 +475,18 @@ class AddCases extends Component {
         }
     }
 
+    onFocus(){
+        this.componentWillMount();
+    }
+
     render() {
 
 		let { idImage, familyBookImage, electricityBillImage, leaseImage, debtProofImage, handicappedProof } = this.state;
 
         return (
             <Container>
+
+                <NavigationEvents onWillFocus={() => this.onFocus()} />
 
                 <Spinner
                     visible = { this.state.spinner }
@@ -767,7 +904,7 @@ class AddCases extends Component {
                                                             </View>
                                                     }
                                                 </View>
-                                                <TouchableOpacity onPress={() => this._ImagePicker('handicappedProof')} style={[styles.overHidden, styles.iconImg, styles.bg_darkGreen, styles.flexCenter, styles.marginHorizontal_5, styles.Radius_5]}>
+                                                <TouchableOpacity onPress={() => this.open('handicappedProof')} style={[styles.overHidden, styles.iconImg, styles.bg_darkGreen, styles.flexCenter, styles.marginHorizontal_5, styles.Radius_5]}>
                                                     <Icon style={[styles.text_White, styles.textSize_20]} type="AntDesign" name='plus' />
                                                 </TouchableOpacity>
                                             </View>
@@ -954,7 +1091,7 @@ class AddCases extends Component {
                                             </View>
                                     }
 								</View>
-								<TouchableOpacity onPress={() => this._ImagePicker('id')} style={[styles.overHidden, styles.iconImg, styles.bg_darkGreen, styles.flexCenter, styles.marginHorizontal_5, styles.Radius_5]}>
+								<TouchableOpacity onPress={() => this.open('id')} style={[styles.overHidden, styles.iconImg, styles.bg_darkGreen, styles.flexCenter, styles.marginHorizontal_5, styles.Radius_5]}>
 									<Icon style={[styles.text_White, styles.textSize_20]} type="AntDesign" name='plus' />
 								</TouchableOpacity>
 							</View>
@@ -978,7 +1115,7 @@ class AddCases extends Component {
 											</View>
 									}
 								</View>
-                                <TouchableOpacity onPress={() => this._ImagePicker('book')} style={[styles.overHidden, styles.iconImg, styles.bg_darkGreen, styles.flexCenter, styles.marginHorizontal_5, styles.Radius_5]}>
+                                <TouchableOpacity onPress={() => this.open('book')} style={[styles.overHidden, styles.iconImg, styles.bg_darkGreen, styles.flexCenter, styles.marginHorizontal_5, styles.Radius_5]}>
                                     <Icon style={[styles.text_White, styles.textSize_20]} type="AntDesign" name='plus' />
                                 </TouchableOpacity>
                             </View>
@@ -1002,7 +1139,7 @@ class AddCases extends Component {
 											</View>
 									}
 								</View>
-                                <TouchableOpacity onPress={() => this._ImagePicker('bill')} style={[styles.overHidden, styles.iconImg, styles.bg_darkGreen, styles.flexCenter, styles.marginHorizontal_5, styles.Radius_5]}>
+                                <TouchableOpacity onPress={() => this.open('bill')} style={[styles.overHidden, styles.iconImg, styles.bg_darkGreen, styles.flexCenter, styles.marginHorizontal_5, styles.Radius_5]}>
                                     <Icon style={[styles.text_White, styles.textSize_20]} type="AntDesign" name='plus' />
                                 </TouchableOpacity>
                             </View>
@@ -1026,7 +1163,7 @@ class AddCases extends Component {
 											</View>
 									}
 								</View>
-								<TouchableOpacity onPress={() => this._ImagePicker('lease')} style={[styles.overHidden, styles.iconImg, styles.bg_darkGreen, styles.flexCenter, styles.marginHorizontal_5, styles.Radius_5]}>
+								<TouchableOpacity onPress={() => this.open('lease')} style={[styles.overHidden, styles.iconImg, styles.bg_darkGreen, styles.flexCenter, styles.marginHorizontal_5, styles.Radius_5]}>
 									<Icon style={[styles.text_White, styles.textSize_20]} type="AntDesign" name='plus' />
 								</TouchableOpacity>
 							</View>
@@ -1050,7 +1187,7 @@ class AddCases extends Component {
 											</View>
 									}
 								</View>
-								<TouchableOpacity onPress={() => this._ImagePicker('debtProof')} style={[styles.overHidden, styles.iconImg, styles.bg_darkGreen, styles.flexCenter, styles.marginHorizontal_5, styles.Radius_5]}>
+								<TouchableOpacity onPress={() => this.open('debtProof')} style={[styles.overHidden, styles.iconImg, styles.bg_darkGreen, styles.flexCenter, styles.marginHorizontal_5, styles.Radius_5]}>
 									<Icon style={[styles.text_White, styles.textSize_20]} type="AntDesign" name='plus' />
 								</TouchableOpacity>
 							</View>

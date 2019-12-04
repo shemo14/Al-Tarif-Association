@@ -56,7 +56,7 @@ class DrawerCustomization extends Component {
                          onItemPress={
                              (route, focused) => {
                                  if (route.route.key === 'logout') {
-                                     this.logout();
+                                     this.logout()
                                  }else {
                                      this.props.navigation.navigate(route.route.key);
                                  }
