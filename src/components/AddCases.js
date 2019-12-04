@@ -113,6 +113,12 @@ class AddCases extends Component {
 			debtProofBase64             : null,
             selected                    : undefined,
             checked                     : false,
+            years                       : [],
+            months                      : [],
+            days                        : [],
+            year                        : null,
+            month                       : null,
+            day                         : null,
         }
     }
 
@@ -162,6 +168,19 @@ class AddCases extends Component {
             }
 
 
+        for(let i = 1450; i > 1340 ; i--){
+            this.state.years.push(i);
+        }
+
+        for(let x = 12; x > 1 ; x--){
+            this.state.months.push(x);
+        }
+
+        for(let m = 30; m > 1 ; m--){
+            this.state.days.push(m);
+        }
+
+
 		this.setState({spinner: true});
 
 		axios({
@@ -206,7 +225,13 @@ class AddCases extends Component {
 
     onValueLiving   (value) {this.setState({selectedLivingType: value});}
 
-    valueQuarter (value) {this.setState({selectedQuarter: value}); console.log('Quarter_id', this.state.selectedQuarter)}
+    onValueYear     (value) {this.setState({year: value});}
+
+    onValueMonth    (value) {this.setState({month: value});}
+
+    onValueDay      (value) {this.setState({day: value});}
+
+    valueQuarter    (value) {this.setState({selectedQuarter: value}); console.log('Quarter_id', this.state.selectedQuarter)}
 
     onValueCities   (value) {
 
@@ -309,35 +334,6 @@ class AddCases extends Component {
 
     };
 
-	// _ImagePicker = async (type) => {
-    //
-	// 	let result = await ImagePicker.launchImageLibraryAsync({
-	// 		allowsEditing       : false,
-	// 		aspect              : [4, 3],
-	// 		base64              : true,
-	// 	});
-    //
-	// 	let localUri = result.uri;
-	// 	let filename = localUri.split('/').pop();
-    //
-	// 	if (!result.cancelled) {
-	// 	    if (type === 'id'){
-	// 			this.setState({ idImage: result.uri ,idBase64:result.base64 });
-    //         }else if(type === 'book'){
-	// 			this.setState({ familyBookImage: result.uri ,familyBookBase64:result.base64 });
-    //         }else if(type === 'bill'){
-	// 			this.setState({ electricityBillImage: result.uri ,electricityBillBase64:result.base64 });
-    //         }else if(type === 'lease'){
-	// 			this.setState({ leaseImage: result.uri ,leaseBase64:result.base64 });
-    //         }else if(type === 'debtProof'){
-	// 			this.setState({ debtProofImage: result.uri ,debtProofBase64:result.base64 });
-    //         }else if(type === 'handicappedProof'){
-    //             this.setState({ handicappedProof: result.uri ,handicappedProofBase64:result.base64 });
-    //         }
-	// 	}
-    //
-	// };
-
     showDatePicker = () => {
         this.setState({ isDatePickerVisible: true });
     };
@@ -400,14 +396,13 @@ class AddCases extends Component {
                 headers     : {Authorization: this.props.user.token},
                 data      : {
                     lang                        : this.props.lang,
-                    // token                       : this.props.auth.data.token,
                     first_name                  : this.state.firstName,
                     second_name                 : this.state.secondName,
                     third_name                  : this.state.thirdName,
                     family_name                 : this.state.familyName,
                     nationality_id              : this.state.selectedNationality,
                     national_id                 : this.state.recordCivilian,
-                    birthday                    : this.state.date,
+                    birthday                    : this.state.year + '/' + this.state.month + '/' + this.state.day,
                     social_status_id            : this.state.selectedSocial,
                     phone                       : this.state.phone,
                     email                       : this.state.email,
@@ -574,22 +569,97 @@ class AddCases extends Component {
                             />
                         </Item>
 
-                        <View style={[styles.Width_100, styles.height_50, styles.marginVertical_10]}>
-                            <TouchableOpacity onPress={this.showDatePicker} style={[styles.Width_100, styles.height_50, styles.bg_lightWhite, styles.Radius_40, styles.paddingHorizontal_20, styles.rowGroup]}>
-                                <Text style={[styles.textRegular, styles.textLeft, styles.textSize_16]}>
-                                    {i18n.translate('date')} : {this.state.date}
-                                </Text>
-                                <Icon style={[styles.textSize_22]} type="AntDesign" name='calendar' />
-                            </TouchableOpacity>
+                        <View style={[styles.rowGroup]}>
+                            <View style={[styles.viewPiker, styles.flexCenter, styles.Radius_10,styles.marginVertical_15,styles.flex_33]}>
+                                <Item style={styles.itemPiker} regular>
+                                    <Picker
+                                        mode                    = "dropdown"
+                                        style                   = {styles.Picker}
+                                        placeholderStyle        = {[styles.textRegular,{ color: "#ccc", writingDirection: 'rtl', width : '100%', fontSize : 18 }]}
+                                        selectedValue           = {this.state.year}
+                                        onValueChange           = {this.onValueYear.bind(this)}
+                                        textStyle               = {[styles.textRegular,{ color: "#ccc", writingDirection: 'rtl' }]}
+                                        placeholder             = {i18n.translate('years')}
+                                        itemTextStyle           = {[styles.textRegular,{ color: "#ccc", writingDirection: 'rtl' }]}
+                                    >
+                                        <Picker.Item style={[styles.itemPicker]} label={i18n.translate('years')} value={null} />
 
-                            <DateTimePicker
-                                isVisible       = {this.state.isDatePickerVisible}
-                                onConfirm       = {this.handleDatePicked}
-                                onCancel        = {this.hideDatePicker}
-                                mode            = {'date'}
-                                minimumDate     = {new Date()}
-                            />
+                                        {
+                                            this.state.years.map((year, i) => (
+                                                <Picker.Item style={[styles.itemPicker]} key={i} label={year} value={year} />
+                                            ))
+                                        }
+
+                                    </Picker>
+                                </Item>
+                                <Icon style={styles.iconPicker} type="AntDesign" name='down' />
+                            </View>
+                            <View style={[styles.viewPiker, styles.flexCenter, styles.Radius_10,styles.marginVertical_15,styles.flex_33]}>
+                                <Item style={styles.itemPiker} regular>
+                                    <Picker
+                                        mode                    = "dropdown"
+                                        style                   = {styles.Picker}
+                                        placeholderStyle        = {[styles.textRegular,{ color: "#ccc", writingDirection: 'rtl', width : '100%', fontSize : 18 }]}
+                                        selectedValue           = {this.state.month}
+                                        onValueChange           = {this.onValueMonth.bind(this)}
+                                        textStyle               = {[styles.textRegular,{ color: "#ccc", writingDirection: 'rtl' }]}
+                                        placeholder             = {i18n.translate('month')}
+                                        itemTextStyle           = {[styles.textRegular,{ color: "#ccc", writingDirection: 'rtl' }]}
+                                    >
+                                        <Picker.Item style={[styles.itemPicker]} label={i18n.translate('month')} value={null} />
+
+                                        {
+                                            this.state.months.map((month, i) => (
+                                                <Picker.Item style={[styles.itemPicker]} key={i} label={month} value={month} />
+                                            ))
+                                        }
+
+                                    </Picker>
+                                </Item>
+                                <Icon style={styles.iconPicker} type="AntDesign" name='down' />
+                            </View>
+                            <View style={[styles.viewPiker, styles.flexCenter, styles.Radius_10,styles.marginVertical_15,styles.flex_33]}>
+                                <Item style={styles.itemPiker} regular>
+                                    <Picker
+                                        mode                    = "dropdown"
+                                        style                   = {styles.Picker}
+                                        placeholderStyle        = {[styles.textRegular,{ color: "#ccc", writingDirection: 'rtl', width : '100%', fontSize : 18 }]}
+                                        selectedValue           = {this.state.day}
+                                        onValueChange           = {this.onValueDay.bind(this)}
+                                        textStyle               = {[styles.textRegular,{ color: "#ccc", writingDirection: 'rtl' }]}
+                                        placeholder             = {i18n.translate('days')}
+                                        itemTextStyle           = {[styles.textRegular,{ color: "#ccc", writingDirection: 'rtl' }]}
+                                    >
+                                        <Picker.Item style={[styles.itemPicker]} label={i18n.translate('days')} value={null} />
+
+                                        {
+                                            this.state.days.map((day, i) => (
+                                                <Picker.Item style={[styles.itemPicker]} key={i} label={day} value={day} />
+                                            ))
+                                        }
+
+                                    </Picker>
+                                </Item>
+                                <Icon style={styles.iconPicker} type="AntDesign" name='down' />
+                            </View>
                         </View>
+
+                        {/*<View style={[styles.Width_100, styles.height_50, styles.marginVertical_10]}>*/}
+                        {/*    <TouchableOpacity onPress={this.showDatePicker} style={[styles.Width_100, styles.height_50, styles.bg_lightWhite, styles.Radius_40, styles.paddingHorizontal_20, styles.rowGroup]}>*/}
+                        {/*        <Text style={[styles.textRegular, styles.textLeft, styles.textSize_16]}>*/}
+                        {/*            {i18n.translate('date')} : {this.state.date}*/}
+                        {/*        </Text>*/}
+                        {/*        <Icon style={[styles.textSize_22]} type="AntDesign" name='calendar' />*/}
+                        {/*    </TouchableOpacity>*/}
+
+                        {/*    <DateTimePicker*/}
+                        {/*        isVisible       = {this.state.isDatePickerVisible}*/}
+                        {/*        onConfirm       = {this.handleDatePicked}*/}
+                        {/*        onCancel        = {this.hideDatePicker}*/}
+                        {/*        mode            = {'date'}*/}
+                        {/*        minimumDate     = {new Date()}*/}
+                        {/*    />*/}
+                        {/*</View>*/}
 
                         <View style={[styles.viewPiker, styles.flexCenter, styles.Radius_40,styles.marginVertical_15,styles.Width_100]}>
                             <Item style={styles.itemPiker} regular>

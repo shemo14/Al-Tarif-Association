@@ -344,6 +344,9 @@ const styles = ({
     flex_30 : {
         flexBasis           : '30%'
     },
+    flex_33 : {
+        flexBasis           : '33.3%'
+    },
     flex_40 : {
         flexBasis           : '40%'
     },

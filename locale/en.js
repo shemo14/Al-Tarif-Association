@@ -184,6 +184,9 @@ const en = {
     'corcial'                   : 'Commercial Registration',
     'city'                      : 'city',
     'upload'                    : 'The picture has been uploaded',
+    'years'                     : 'year',
+    'months'                    : 'month',
+    'days'                      : 'day',
 };
 
 export default en;

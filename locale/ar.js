@@ -183,6 +183,9 @@ const ar = {
     'mycases'                   : 'حالآتي',
     'city'                      : 'المدينه',
     'upload'                    : 'تم تحميل الصوره',
+    'years'                     : 'السنه',
+    'month'                     : 'الشهر',
+    'days'                      : 'اليوم',
 };
 
 export default ar;
