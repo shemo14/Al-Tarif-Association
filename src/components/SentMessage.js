@@ -62,7 +62,7 @@ class SentMessage extends Component {
                 method  : 'POST',
                 data: {
                     lang            : this.props.lang,
-                    token           : this.props.auth.data.token,
+                    token           : (this.props.auth)?this.props.auth.data.token: null,
                     bank_id         : data.bank_id,
                     case_id         : data.case_id,
                     account_name    : data.account_name,

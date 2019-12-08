@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {View, Text, Image, TouchableOpacity} from "react-native";
-import {Container, Content, Form, Input, Item, Toast,} from 'native-base'
+import {Container, Content, Form, Input, Item, Toast, Header, Left, Button, Icon, Body, Title} from 'native-base'
 import styles from '../../assets/style';
 
 import i18n from "../../locale/i18n";
@@ -116,6 +116,17 @@ class ForgetPassword extends Component {
                 <Spinner
                     visible           = { this.state.spinner }
                 />
+
+                <Header style={styles.headerView}>
+                    <Left style={styles.leftIcon}>
+                        <Button style={styles.Button} transparent onPress={() => this.props.navigation.goBack()}>
+                            <Icon style={[styles.text_darkGreen, styles.textSize_22]} type="AntDesign" name='arrowright' />
+                        </Button>
+                    </Left>
+                    <Body style={styles.bodyText}>
+                        {/*<Title style={[styles.textRegular , styles.text_darkGreen, styles.textSize_20]}>{i18n.translate('back')}</Title>*/}
+                    </Body>
+                </Header>
 
                 <Content contentContainerStyle={styles.bgFullWidth}>
 

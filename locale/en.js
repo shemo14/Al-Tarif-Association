@@ -17,7 +17,7 @@ const en = {
     'terms'                     : 'Terms and Conditions',
     'haveAcc'                   : 'you have an account',
     'actAccount'                : 'activate account',
-    'plaseChick'                : 'Please send the code sent to your phone',
+    'plaseChick'                : 'Please write the code sent to your mobile phone',
     'confirm'                   : 'confirm',
     'donSent'                   : 'I didnt receive the code',
     'home'                      : 'home',
@@ -187,6 +187,7 @@ const en = {
     'years'                     : 'year',
     'months'                    : 'month',
     'days'                      : 'day',
+    // 'back'                      : 'back',
 };
 
 export default en;

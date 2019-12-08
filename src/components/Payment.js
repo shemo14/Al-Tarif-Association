@@ -12,11 +12,19 @@ class Payment extends Component {
         this.state = {
             checked         : true,
             bank_id         : '',
-            case_id         : this.props.navigation.state.params.case_id,
+            case_id         : '',
         }
     }
 
     componentWillMount() {
+
+        // if(this.props.navigation.state.params.case_id){
+        //     this.setState({case_id : this.props.navigation.state.params.case_id});
+        // }else {
+        //     this.setState({case_id : null});
+        // }
+        //
+        console.log('id ===', this.props.navigation.state.params.case_id);
 
     }
 

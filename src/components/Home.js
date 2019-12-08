@@ -16,11 +16,12 @@ class Home extends Component {
     constructor(props){
         super(props);
         this.state = {
-            spinner         : false,
-            projects        : '',
-            doners          : '',
-            totalCases      : '',
-            ActiveCases     : '',
+            spinner                 : false,
+            projects                : '',
+            projects_string         : '',
+            doners                  : '',
+            totalCases              : '',
+            ActiveCases             : '',
         }
     }
 
@@ -38,6 +39,7 @@ class Home extends Component {
 
             this.setState({
                 projects                : response.data.data.projects,
+                projects_string         : response.data.data.projects_string,
                 doners                  : response.data.data.doners,
                 totalCases              : response.data.data.totalCases,
                 ActiveCases             : response.data.data.ActiveCases,
@@ -176,7 +178,7 @@ class Home extends Component {
 
                                 <View style={[styles.overHidden, styles.flexCenter]}>
                                     <Text style={[styles.text_turquoise, styles.textSize_24, styles.textRegular, styles.fontBold]}>{ this.state.projects }</Text>
-                                    <Text style={[styles.text_gray, styles.textSize_18, styles.textRegular, styles.fontSpacing]}>{i18n.translate('Project')}</Text>
+                                    <Text style={[styles.text_gray, styles.textSize_18, styles.textRegular, styles.fontSpacing]}>{ this.state.projects_string }</Text>
                                 </View>
 
                             </View>
@@ -192,7 +194,7 @@ class Home extends Component {
                                 styles.marginVertical_25,
                                 styles.height_50
                             ]}
-                            onPress={() => this.chickUser('Payment')}>
+                            onPress={() => this.props.navigation.navigate('Payment', {case_id : null})}>
                             <Text style={[styles.textRegular , styles.textSize_18, styles.text_White, styles.paddinVertical_10]}>
                                 {i18n.translate('publicDon')}
                             </Text>

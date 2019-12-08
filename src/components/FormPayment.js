@@ -60,7 +60,7 @@ class FormPayment extends Component {
             base_64                 : [],
             photos                  : [],
             hasCameraPermission     : null,
-            imgBase64               : ''
+            imgBase64               : '',
         }
 
     }
@@ -169,7 +169,7 @@ class FormPayment extends Component {
         }else if (this.state.amount.length <= 0){
             isError     = true;
             msg         = i18n.translate('enteramount');
-        }else if (this.state.eventImg === ''){
+        }else if (this.state.imgBase64 === '' || this.state.imgBase64 === i18n.translate('receipt')){
             isError     = true;
             msg         = i18n.translate('enterpicture');
         }

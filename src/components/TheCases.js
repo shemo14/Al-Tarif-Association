@@ -93,16 +93,15 @@ class TheCases extends Component {
                     type            : "danger",
                     textStyle       : {
                         color           : "white",
-                        fontFamily      : 'CairoRegular',
+                        fontFamily      : 'cairo',
                         textAlign       : 'center'
                     }
                 });
             }else {
-                this.setState({
-                    theCases                : response.data.data,
-                    spinner                 : false
-                });
+                this.setState({theCases : response.data.data,});
             }
+
+            this.setState({spinner : false});
 
         }).catch(err => {
             Toast.show({
