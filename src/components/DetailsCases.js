@@ -217,11 +217,10 @@ class DetailsCases extends Component {
 
     }
 
-    onShare = async () => {
+    onShare = async (id) => {
         try {
             const result = await Share.share({
-                message:
-                    'React Native | A framework for building native apps using React',
+                message: ` ${i18n.translate('der')}   ${id}`,
             });
 
             if (result.action === Share.sharedAction) {
@@ -261,7 +260,7 @@ class DetailsCases extends Component {
                         <Title style={[styles.textRegular , styles.text_darkGreen, styles.textSize_20]}>{i18n.translate('caseDet')}</Title>
                     </Body>
                     <Right style={styles.rightIcon}>
-                        <Button style={styles.Button} transparent onPress={() => this.onShare()}>
+                        <Button style={styles.Button} transparent onPress={() => this.onShare(this.state.case_id)}>
                             <Icon style={[styles.text_gray, styles.textSize_18]} type="AntDesign" name='sharealt' />
                         </Button>
                         <Button style={styles.Button} transparent onPress={() => this.clickRecommend()}>

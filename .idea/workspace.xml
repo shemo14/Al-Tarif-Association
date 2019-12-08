@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b83a1297-d519-4fd3-b9df-aabc04ed9a10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactotronConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/ReactotronConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locale/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/locale/ar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locale/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/locale/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ForgetPassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ForgetPassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FormPayment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FormPayment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Payment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SentMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SentMessage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TheCases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TheCases.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddCases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddCases.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DetailsCases.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DetailsCases.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/locale/ar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="189" column="2" lean-forward="true" selection-start-line="189" selection-start-column="2" selection-end-line="189" selection-end-column="2" />
+            <state relative-caret-position="565">
+              <caret line="188" column="7" selection-start-line="188" selection-end-line="189" />
             </state>
           </provider>
         </entry>
@@ -54,53 +47,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/locale/en.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="190" column="2" lean-forward="true" selection-start-line="190" selection-start-column="2" selection-end-line="190" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="196" column="100" selection-start-line="196" selection-start-column="100" selection-end-line="196" selection-end-column="100" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="587">
+              <caret line="189" column="8" selection-start-line="189" selection-start-column="5" selection-end-line="189" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/FormPayment.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="210" column="38" selection-start-line="210" selection-start-column="38" selection-end-line="210" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Payment.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
-              <caret line="54" column="100" selection-start-line="54" selection-start-column="100" selection-end-line="54" selection-end-column="100" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/DetailsCases.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="439" lean-forward="true" selection-start-line="439" selection-end-line="439" />
+            <state relative-caret-position="189">
+              <caret line="222" column="50" selection-start-line="222" selection-start-column="50" selection-end-line="222" selection-end-column="50" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -112,9 +69,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>المدين</find>
-      <find>الحي</find>
-      <find>da</find>
       <find>date</find>
       <find>Camera</find>
       <find>type</find>
@@ -142,6 +96,9 @@
       <find>Cair</find>
       <find>chickUser</find>
       <find>plaseChick</find>
+      <find>year</find>
+      <find>years</find>
+      <find>case_id</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -161,11 +118,8 @@
         <option value="$PROJECT_DIR$/src/components/DateNum.js" />
         <option value="$PROJECT_DIR$/src/routes/index.js" />
         <option value="$PROJECT_DIR$/assets/style/index.js" />
-        <option value="$PROJECT_DIR$/src/components/AddCases.js" />
         <option value="$PROJECT_DIR$/src/components/MyInterests.js" />
         <option value="&lt;49deb49a-4e96-4689-9d92-a6cd4862544f&gt;/resources/views/resturant_control/transfer/index.blade.php" />
-        <option value="$PROJECT_DIR$/locale/en.js" />
-        <option value="$PROJECT_DIR$/locale/ar.js" />
         <option value="$PROJECT_DIR$/src/components/ForgetPassword.js" />
         <option value="$PROJECT_DIR$/src/components/SentMessage.js" />
         <option value="$PROJECT_DIR$/ReactotronConfig.js" />
@@ -173,6 +127,10 @@
         <option value="$PROJECT_DIR$/src/components/Home.js" />
         <option value="$PROJECT_DIR$/src/components/Payment.js" />
         <option value="$PROJECT_DIR$/src/components/FormPayment.js" />
+        <option value="$PROJECT_DIR$/src/components/AddCases.js" />
+        <option value="$PROJECT_DIR$/locale/ar.js" />
+        <option value="$PROJECT_DIR$/locale/en.js" />
+        <option value="$PROJECT_DIR$/src/components/DetailsCases.js" />
       </list>
     </option>
   </component>
@@ -186,6 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -213,7 +172,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -257,22 +215,22 @@
       <updated>1574606127572</updated>
       <workItem from="1574606129100" duration="9569000" />
       <workItem from="1574630522845" duration="400000" />
-      <workItem from="1575360419089" duration="57527000" />
+      <workItem from="1575360419089" duration="57708000" />
+      <workItem from="1575811585061" duration="1195000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67496000" />
+    <option name="totallyTimeSpent" value="68872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17596567" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17836677" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -286,11 +244,12 @@
       <window_info anchor="bottom" id="RNConsole" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="12" />
-      <window_info anchor="right" id="Remote Host" weight="0.21244635" />
+      <window_info anchor="bottom" id="TypeScript" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
+      <window_info anchor="right" id="Remote Host" order="4" weight="0.21244635" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,16 +313,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DateNum.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DateNum.js" />
     <entry file="file://$PROJECT_DIR$/src/components/OpenCamera.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-327">
@@ -440,16 +390,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="637" column="36" lean-forward="true" selection-start-line="637" selection-start-column="36" selection-end-line="637" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/AddCases.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2050">
-          <caret line="220" lean-forward="true" selection-start-line="220" selection-end-line="220" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -545,13 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/locale/ar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="189" column="2" lean-forward="true" selection-start-line="189" selection-start-column="2" selection-end-line="189" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ForgetPassword.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -569,13 +502,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/locale/en.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="190" column="2" lean-forward="true" selection-start-line="190" selection-start-column="2" selection-end-line="190" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -616,19 +542,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DetailsCases.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="439" lean-forward="true" selection-start-line="439" selection-end-line="439" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="4116">
           <caret line="196" column="100" selection-start-line="196" selection-start-column="100" selection-end-line="196" selection-end-column="100" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -650,6 +566,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="210" column="38" selection-start-line="210" selection-start-column="38" selection-end-line="210" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AddCases.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="173" lean-forward="true" selection-start-line="173" selection-end-line="173" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locale/ar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="188" column="7" selection-start-line="188" selection-end-line="189" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locale/en.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="189" column="8" selection-start-line="189" selection-start-column="5" selection-end-line="189" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DetailsCases.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="222" column="50" selection-start-line="222" selection-start-column="50" selection-end-line="222" selection-end-column="50" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

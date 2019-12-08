@@ -185,9 +185,9 @@ const en = {
     'city'                      : 'city',
     'upload'                    : 'The picture has been uploaded',
     'years'                     : 'year',
-    'months'                    : 'month',
+    'month'                     : 'month',
     'days'                      : 'day',
-    // 'back'                      : 'back',
+    'der'                       : 'Donate now, case number',
 };
 
 export default en;

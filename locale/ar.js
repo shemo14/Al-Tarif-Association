@@ -186,7 +186,7 @@ const ar = {
     'years'                     : 'السنه',
     'month'                     : 'الشهر',
     'days'                      : 'اليوم',
-    // 'back'                      : 'رجوع',
+    'der'                       : 'قم بالتبرع الآن ، رقم الحالة',
 };
 
 export default ar;

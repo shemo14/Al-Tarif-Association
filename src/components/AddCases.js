@@ -169,15 +169,15 @@ class AddCases extends Component {
 
 
         for(let i = 1450; i > 1340 ; i--){
-            this.state.years.push(i);
+           this.state.years.push(JSON.stringify(i));
         }
 
         for(let x = 12; x > 1 ; x--){
-            this.state.months.push(x);
+            this.state.months.push(JSON.stringify(x));
         }
 
         for(let m = 30; m > 1 ; m--){
-            this.state.days.push(m);
+            this.state.days.push(JSON.stringify(m));
         }
 
 
