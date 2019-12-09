@@ -170,7 +170,7 @@ class Search extends Component {
                         maximumTrackTintColor       = {"#38973E"}
                         minimumTrackTintColor       = {'#636363'}
                         style                       = {{width: '100%', height: 40, marginVertical : 20}}
-                        minimumValue                = {Number(this.state.min)}
+                        // minimumValue                = {Number(this.state.min)}
                     />
 
                     <View style={[styles.rowGroup]}>

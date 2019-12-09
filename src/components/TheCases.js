@@ -282,7 +282,8 @@ class TheCases extends Component {
 
                 <TouchableOpacity
                     style       = {[styles.bg_darkGreen, styles.Radius_60, styles.flexCenter, styles.addcases]}
-                    onPress     = {() => this.props.navigation.navigate('AddCases')}>
+                    onPress     = {() => this.props.navigation.navigate('AddCases', {type : null})}
+                >
                     <Text>
                         <Icon style={[styles.text_White, styles.textSize_22]} type="AntDesign" name='plus' />
                     </Text>
