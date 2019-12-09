@@ -83,16 +83,10 @@ class Register extends Component {
             this.setState({ spinner: false });
 
             const { fullName, email, phone, password, NationalNnm } = this.state;
-            const data = {
-                fullName,
-                email,
-                phone,
-                password,
-                NationalNnm,
-                lang: this.props.lang,
-            };
+            const data = {fullName, email, phone, password, NationalNnm, lang: this.props.lang,};
 
             this.props.register(data, this.props);
+
         }else {
 
             this.setState({ spinner: false });

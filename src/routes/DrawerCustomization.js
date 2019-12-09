@@ -33,7 +33,7 @@ class DrawerCustomization extends Component {
         let { user } = this.props;
         if ( user == null )
             user = {
-                avatar      : '../../assets/img/profile.png',
+                avatar      : 'https://korbaah.com/images/users/default.png',
                 name        : i18n.translate('guest'),
             };
 

@@ -47,6 +47,7 @@ class TheCases extends Component {
                         textAlign       : 'center'
                     }
                 });
+                this.setState({theCases : []});
             }else {
                 this.setState({
                     theCases                : response.data.data,
@@ -97,6 +98,7 @@ class TheCases extends Component {
                         textAlign       : 'center'
                     }
                 });
+                this.setState({theCases : []});
             }else {
                 this.setState({theCases : response.data.data,});
             }

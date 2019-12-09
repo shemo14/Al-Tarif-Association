@@ -12,12 +12,12 @@ export const register = (data, props) => {
 				url: CONST.url + 'register',
 				method: 'POST',
 				data: {
-					name		: data.fullName,
-					email		: data.email,
-					phone		: data.phone,
-					password	: data.password,
-					national_id	: data.NationalNnm,
-					lang		: data.lang,
+					name			: data.fullName,
+					email			: data.email,
+					phone			: data.phone,
+					password		: data.password,
+					national_id		: data.NationalNnm,
+					lang			: data.lang,
 					device_id,
 				}
 			}).then(response => {
@@ -26,7 +26,7 @@ export const register = (data, props) => {
 					props.navigation.navigate('ActiveAccount', {
 						code			: response.data.data.code,
 						user_id			: response.data.data.user_id,
-						phone			: data.phone,
+						phone			: data.fullName,
 						password		: data.password,
 						deviceId		: device_id
 					});

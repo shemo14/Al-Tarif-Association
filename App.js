@@ -1,5 +1,5 @@
 import React from 'react';
-import { View , I18nManager, AsyncStorage} from 'react-native';
+import { View , I18nManager, AsyncStorage, Platform} from 'react-native';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import AppNavigator from './src/routes';
@@ -40,6 +40,7 @@ export default class App extends React.Component {
   }
 
   async componentWillMount() {
+
     const { status: existingStatus } = await Permissions.getAsync(
         Permissions.NOTIFICATIONS
     );
@@ -55,6 +56,13 @@ export default class App extends React.Component {
     }
 
     let token = await Notifications.getExpoPushTokenAsync();
+
+    if (Platform.OS === 'android') {
+      Notifications.createChannelAndroidAsync('notify', {
+        name    : 'Chat messages',
+        sound   : true,
+      });
+    }
 
   }
 

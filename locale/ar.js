@@ -187,6 +187,7 @@ const ar = {
     'month'                     : 'الشهر',
     'days'                      : 'اليوم',
     'der'                       : 'قم بالتبرع الآن ، رقم الحالة',
+    'guest'                     : 'زائر',
 };
 
 export default ar;

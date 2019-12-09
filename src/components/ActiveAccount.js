@@ -30,6 +30,8 @@ class ActiveAccount extends Component {
 
     }
 
+
+
     validate = () => {
 
         let isError     = false;
@@ -95,7 +97,7 @@ class ActiveAccount extends Component {
 
                 this.setState({ isSubmitted: true });
                 this.props.userLogin({ phone, password, deviceId , type}, this.props.lang);
-                this.props.activeAccount(phone);
+                // this.props.activeAccount(phone);
 
             }).catch(err => {
                 console.log(err);
@@ -146,9 +148,11 @@ class ActiveAccount extends Component {
     componentWillReceiveProps(newProps){
         console.log('auth data', newProps);
 
+        console.log('this is user id...', this.state.userId);
         if (newProps.auth !== null && newProps.success === true){
 
             console.log('this is user id...', this.state.userId);
+            console.log('this is user id...', newProps.auth.data.id);
 
             if (this.state.userId === null){
                 this.setState({ userId: newProps.auth.data.id });
@@ -160,8 +164,8 @@ class ActiveAccount extends Component {
 
         if (newProps.auth !== null) {
             Toast.show({
-                text            : newProps.auth.msg,
-                type            : newProps.auth.status === true ? "success" : "danger",
+                text            : newProps.auth.message,
+                type            : newProps.auth.success === true ? "success" : "danger",
                 duration        : 3000,
                 textStyle       : {
                     color           : "white",

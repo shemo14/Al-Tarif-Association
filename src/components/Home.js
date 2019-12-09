@@ -11,6 +11,7 @@ import CONST from "../consts";
 import Spinner from "react-native-loading-spinner-overlay";
 import {connect} from "react-redux";
 import {chooseLang, profile, userLogin} from "../actions";
+import { Notifications } from 'expo';
 
 class Home extends Component {
     constructor(props){
@@ -24,6 +25,18 @@ class Home extends Component {
             ActiveCases             : '',
         }
     }
+
+    async componentDidMount(){
+        Notifications.addListener(this.handleNotification);
+    }
+
+    handleNotification = (notification) => {
+        console.log('test notification', notification);
+
+        if (notification && notification.origin !== 'received') {
+            this.props.navigation.navigate('Notification');
+        }
+    };
 
     componentWillMount() {
 
